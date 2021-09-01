@@ -4,25 +4,23 @@ import Document, {
   Main,
   NextScript,
   DocumentInitialProps,
-  DocumentContext,
+  DocumentContext
 } from 'next/document'
 
 import { ServerStyleSheet } from 'styled-components'
 import favicon from '../../public/favicon.ico'
 
-// Head: header global do app
-// Main: onde vai a estrutura do React
-// NextScripts: onde vai o javascript do React
-
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
         })
 
       const initialProps = await Document.getInitialProps(ctx)
@@ -34,7 +32,7 @@ class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        ),
+        )
       }
     } finally {
       sheet.seal()

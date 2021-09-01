@@ -7,7 +7,7 @@ const Style = styled.div`
 
   height: 100vh;
 
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.background};
 
   svg {
