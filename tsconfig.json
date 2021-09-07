@@ -6,6 +6,7 @@
     "target": "es5",
     "allowJs": true,
     "strict": false,
+    "baseUrl": "src",
     "jsx": "preserve",
     "module": "esnext",
     "skipLibCheck": true,
