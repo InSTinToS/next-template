@@ -11,6 +11,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+
       <Component {...pageProps} />
     </ThemeProvider>
   </Provider>

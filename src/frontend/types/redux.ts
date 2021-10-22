@@ -1,10 +1,9 @@
-import Store from 'store'
-
 import {
   ActionReducerMapBuilder,
   CaseReducer,
   PayloadAction
 } from '@reduxjs/toolkit'
+import Store from 'frontend/store'
 
 export type TReducer<T> = CaseReducer<T, PayloadAction<Partial<T>>>
 
