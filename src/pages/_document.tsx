@@ -1,14 +1,13 @@
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
+  DocumentContext,
   DocumentInitialProps,
-  DocumentContext
+  Head,
+  Html,
+  Main,
+  NextScript
 } from 'next/document'
 
 import { ServerStyleSheet } from 'styled-components'
-import favicon from '../../public/favicon.ico'
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -45,7 +44,7 @@ class MyDocument extends Document {
         <Head>
           <meta charSet='utf-8' />
 
-          <link rel='icon' href={favicon} />
+          <link rel='icon' href='../../public/favicon.ico' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
             href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap'
