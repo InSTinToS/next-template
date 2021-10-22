@@ -1,7 +1,7 @@
 import extraReducers from './extraReducers'
 import reducers from './reducers'
 
-import { TUser } from 'types/user'
+import { TUser } from 'types/responses/user'
 
 import { createSlice } from '@reduxjs/toolkit'
 

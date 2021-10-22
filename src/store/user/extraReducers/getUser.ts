@@ -1,9 +1,9 @@
-import { TUser, TUserRes } from 'types/user'
+import { TUser, TUserRes } from 'types/responses/user'
 
 import axios, { AxiosResponse } from 'axios'
 
 interface TGetUserParams {
-  id?: number
+  id?: string
 }
 
 type TGetUser = (_params: TGetUserParams) => Promise<{ user: TUser } | null>

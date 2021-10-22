@@ -21,9 +21,8 @@ const Home: NextPage<HomeProps> = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    console.log(user)
-    dispatch(getUserThunk({ id: 1 }))
-  }, [dispatch, user])
+    dispatch(getUserThunk({ id: '1' }))
+  }, [dispatch])
 
   return (
     <Style>
