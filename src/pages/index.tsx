@@ -1,3 +1,3 @@
-import Home from 'pagesComponents/Home'
+import Home from 'frontend/pagesComponents/Home'
 
 export default Home

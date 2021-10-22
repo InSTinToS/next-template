@@ -1,6 +1,6 @@
 import { TUserState } from '../'
 
-import { TReducer } from 'types/redux'
+import { TReducer } from 'frontend/types/redux'
 
 const update: TReducer<TUserState> = (state, { payload }) => ({
   ...state,

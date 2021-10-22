@@ -1,9 +1,8 @@
 import { TUserState } from '../'
 import getUser from './getUser'
 
-import { TExtraReducers } from 'types/redux'
-
 import { createAsyncThunk } from '@reduxjs/toolkit'
+import { TExtraReducers } from 'frontend/types/redux'
 
 export const getUserThunk = createAsyncThunk('user/getUser', getUser)
 

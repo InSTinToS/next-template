@@ -1,10 +1,9 @@
 import { AppProps } from 'next/app'
 
-import GlobalStyle from '../styles/global'
-import theme from '../styles/theme'
+import GlobalStyle from '../frontend/styles/global'
 
-import store from 'store'
-
+import store from 'frontend/store'
+import theme from 'frontend/styles/theme'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 

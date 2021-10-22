@@ -4,11 +4,9 @@ import Style from './styles'
 import { NextPage } from 'next'
 import Head from 'next/head'
 
-import { TUserState } from 'store/user'
-import { getUserThunk } from 'store/user/extraReducers'
-
-import { TRootState } from 'types/redux'
-
+import { TUserState } from 'frontend/store/user'
+import { getUserThunk } from 'frontend/store/user/extraReducers'
+import { TRootState } from 'frontend/types/redux'
 import { useDispatch, useSelector } from 'react-redux'
 
 interface HomeProps {}
