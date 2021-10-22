@@ -1,7 +1,7 @@
-import { UserResType } from 'types/user'
-import { NextRoute } from 'types/next'
+import { TUserRes } from 'types/user'
+import { TNextRoute } from 'types/next'
 
-const user: NextRoute<UserResType> = (req, res) => {
+const user: TNextRoute<TUserRes> = (req, res) => {
   if (req.method === 'GET') {
     const { id } = req.query
 

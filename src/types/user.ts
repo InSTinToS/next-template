@@ -1,10 +1,12 @@
-export interface UserType {
+import { AxiosResponse } from 'axios'
+
+export interface TUser {
   id: number
   name: string
 }
 
-export interface UserResType {
-  user: UserType
+export type TUserRes = AxiosResponse<{
+  user: TUser
   message: string
   success: boolean
-}
+}>
