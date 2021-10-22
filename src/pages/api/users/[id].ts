@@ -12,7 +12,7 @@ const user: TNextRoute<TUserRes> = (req, res) => {
         user: { name: 'Miguel', id: 1 }
       }
 
-      res.status(200).json(response)
+      return res.status(200).json(response)
     }
   }
 }
