@@ -1,7 +1,11 @@
-/* eslint-disable no-unused-vars */
 import { NextApiRequest, NextApiResponse } from 'next'
 
-export type TNextRoute<ResponseType> = (
+export interface DefaultResType {
+  message: string
+  success: boolean
+}
+
+export type NextRouteType<ResponseType> = (
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
-) => void
+) => Promise<void>
