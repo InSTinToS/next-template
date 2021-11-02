@@ -18,7 +18,7 @@ O next possui uma forma para resolver este problema denominado Pre-rendering ent
 
 ## SSG (Static Side Generation)
 
-### Importante: rodar yarn dev antes de yarn build
+### Importante: Nas funções de fetch do next utilizar código diretamente do backend não usando axios
 
 SSG é a forma mais rapida para o usuario pois todas as requests são realizadas na hora do build então vai estar tudo carregado, porém é ruim para fazer atualizações destes dados retornados pelas requests, pois terá que realizar um build toda vez quel algum dado for alterado.
 
