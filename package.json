@@ -1,6 +1,6 @@
 {
   "name": "next-template",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "author": "Miguel Andrade Barreto",
   "scripts": {
     "dev": "next dev",
