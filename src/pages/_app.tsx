@@ -5,8 +5,6 @@ import GlobalStyle from '../frontend/styles'
 import theme from '../frontend/styles/theme'
 import favicon from '../../public/favicon.ico'
 
-import store from 'frontend/store'
-import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
@@ -15,13 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <link rel='icon' href={favicon} />
     </Head>
 
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
 
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </Provider>
+      <Component {...pageProps} />
+    </ThemeProvider>
   </>
 )
 
