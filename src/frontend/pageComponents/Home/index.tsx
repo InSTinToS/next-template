@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 import Style from './style'
 
 const Home = () => {
-  const router = useRouter()
-
   return (
     <Style>
       <Head>
