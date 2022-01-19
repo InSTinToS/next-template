@@ -21,18 +21,8 @@
           "disableSort": true
         },
         {
-          "regex": "^./|^../",
+          "regex": "^./|^../|^bootstrap",
           "orderLevel": 3,
-          "disableSort": true
-        },
-        {
-          "regex": "^frontend",
-          "orderLevel": 4,
-          "disableSort": true
-        },
-        {
-          "regex": "^backend",
-          "orderLevel": 5,
           "disableSort": true
         },
         {

@@ -2,6 +2,9 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import favicon from '../../public/favicon.ico'
+import 'bootstrap/dist/css/bootstrap.css'
+
+import 'frontend/styles/bootstrap.scss'
 
 import GlobalProvider from 'frontend/components/GlobalProvider'
 

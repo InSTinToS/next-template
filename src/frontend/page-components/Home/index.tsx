@@ -1,12 +1,13 @@
 import Head from 'next/head'
 
-import luffy from '../../../../public/luffy.png'
 import Style from './style'
 
 import { UserActions, UserStore } from 'frontend/store/user'
+
 import { RootStore } from 'frontend/types/redux'
 
 import { useEffect } from 'react'
+import { Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Home = () => {
@@ -35,6 +36,8 @@ const Home = () => {
 
             <img src='/watermelon.svg' />
           </div>
+
+          <Button className='btn btn-lg btn-success p-4'>Teste</Button>
         </div>
       </Style>
     </>
