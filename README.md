@@ -4,5 +4,6 @@
   * .env is inside next.config.js
   * will change in build time (run yarn dev to see changes)
 
-# tsconfig.json inside tests
-  * add to ignore --isolatedModules required by babel of Next
+# Jest and Cypress
+  * when use expect in jest need be imported from "@jest/globals"
+  * added: \<rootDir>/src/frontend/tests/cypress/ inside jest.config.js to jest ignore all cypress folder 

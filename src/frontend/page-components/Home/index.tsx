@@ -18,10 +18,6 @@ const Home = () => {
     dispatch(UserActions.update({ name: 'miguel' }))
   }, [])
 
-  useEffect(() => {
-    console.log(user)
-  }, [user])
-
   return (
     <>
       <Head>
@@ -30,7 +26,7 @@ const Home = () => {
 
       <Style>
         <div>
-          <h1 data-cy='hello'>Hello {user?.name}</h1>
+          <h1 data-testid='hello'>Hello {user?.name}</h1>
 
           <h2>dotenv: {process.env.dotenv}</h2>
 
