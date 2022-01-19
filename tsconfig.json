@@ -1,12 +1,12 @@
 {
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js"
+    "next.config.js",
+    "cypress/*",
+    "src/frontend/tests/cypress/plugins"
   ],
   "compilerOptions": {
     "noEmit": true,
@@ -16,6 +16,7 @@
     "baseUrl": "src",
     "jsx": "preserve",
     "module": "esnext",
+    "types": ["cypress"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "isolatedModules": true,
@@ -23,11 +24,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "incremental": true
   }
 }

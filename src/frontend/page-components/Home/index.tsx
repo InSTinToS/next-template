@@ -30,7 +30,7 @@ const Home = () => {
 
       <Style>
         <div>
-          <h1>Hello {user?.name}</h1>
+          <h1 data-cy='hello'>Hello {user?.name}</h1>
 
           <h2>dotenv: {process.env.dotenv}</h2>
 
