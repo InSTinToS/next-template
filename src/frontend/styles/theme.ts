@@ -13,6 +13,11 @@ const theme = {
     '5': '48px',
     '6': '64px',
     '7': '128px'
+  },
+  fonts: {
+    sizes: {
+      md: 'clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem)'
+    }
   }
 }
 

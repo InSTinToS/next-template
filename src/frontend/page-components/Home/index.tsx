@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
+import luffy from '../../../../public/luffy.png'
 import Style from './style'
 
 import { UserActions, UserStore } from 'frontend/store/user'
 import { RootStore } from 'frontend/types/redux'
-import reset from 'frontend/store/user/reducers/reset'
 
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -23,17 +23,25 @@ const Home = () => {
   }, [user])
 
   return (
-    <Style>
+    <>
       <Head>
         <title>Home page</title>
       </Head>
 
-      <main>
-        <h1>Hello {user?.name}</h1>
+      <Style>
+        <div>
+          <h1>Hello {user?.name}</h1>
 
-        <h2>dotenv: {process.env.dotenv}</h2>
-      </main>
-    </Style>
+          <h2>dotenv: {process.env.dotenv}</h2>
+
+          <div>
+            <img src='/luffy.png' />
+
+            <img src='/watermelon.svg' />
+          </div>
+        </div>
+      </Style>
+    </>
   )
 }
 
