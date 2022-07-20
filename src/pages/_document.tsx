@@ -1,54 +1,25 @@
-import Document, {
-  DocumentContext,
-  DocumentInitialProps,
-  Head,
-  Html,
-  Main,
-  NextScript
-} from 'next/document'
+import favicon from '@public/favicon.ico'
 
-import { ServerStyleSheet } from 'styled-components'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
-
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
-        })
-
-      const initialProps = await Document.getInitialProps(ctx)
-
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        )
-      }
-    } finally {
-      sheet.seal()
-    }
-  }
-
   render(): JSX.Element {
     return (
-      <Html lang='pt'>
+      <Html lang='pt-br'>
         <Head>
-          <meta charSet='utf-8' />
-
+          <link rel='icon' href={favicon} />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             rel='stylesheet'
-            href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Roboto&display=swap'
           />
+
+          <meta charSet='UTF-8' />
+          <meta name='keywords' content='' />
+          <meta name='description' content='' />
+          <meta name='application-name' content='web' />
+          <meta name='author' content='Miguel Andrade Barreto' />
         </Head>
 
         <body>

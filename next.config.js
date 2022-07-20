@@ -1,11 +1,7 @@
 const withImages = require('next-images')
 
 module.exports = withImages({
-  esModule: true,
-  inlineImageLimit: false,
-  env: {
-    dotenv: 'dotenv in next.config.js ok!'
-  },
+  reactStrictMode: false,
   images: {
     disableStaticImages: true
   },

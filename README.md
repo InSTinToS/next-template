@@ -1,9 +1,12 @@
-## Template para Next
+# My Tattoo
 
-# Dotenv
-  * .env is inside next.config.js (or .env.local)
-  * will change in build time (run yarn dev to see changes)
+## Web
 
-# Jest and Cypress
-  * when use expect in jest need be imported from "@jest/globals"
-  * added: \<rootDir>/src/frontend/tests/cypress/ inside jest.config.js to jest ignore all cypress folder 
+### Latest prints
+
+- #### Sign in page
+
+  ![Sign in screen](./public/temp/prints/sign-in.png)
+
+- #### Feed page
+  ![Feed screen](./public/temp/prints/feed.png)

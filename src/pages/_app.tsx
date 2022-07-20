@@ -1,23 +1,24 @@
-import { AppProps } from 'next/app'
+import GlobalProvider from 'components/providers/GlobalProvider'
+
+import 'styles/bootstrap.scss'
+
+import type { TAppPropsWithLayout } from 'typescript/next.types'
+
+import 'bootstrap/dist/css/bootstrap.css'
 import Head from 'next/head'
 
-import favicon from '../../public/favicon.ico'
-import 'bootstrap/dist/css/bootstrap.css'
+const MyApp = ({ Component, pageProps }: TAppPropsWithLayout) => {
+  const getLayout = Component.getLayout ?? (page => page)
 
-import 'frontend/styles/bootstrap.scss'
+  return (
+    <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
 
-import GlobalProvider from 'frontend/components/GlobalProvider'
-
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <Head>
-      <link rel='icon' href={favicon} />
-    </Head>
-
-    <GlobalProvider>
-      <Component {...pageProps} />
-    </GlobalProvider>
-  </>
-)
+      <GlobalProvider>{getLayout(<Component {...pageProps} />)}</GlobalProvider>
+    </>
+  )
+}
 
 export default MyApp
