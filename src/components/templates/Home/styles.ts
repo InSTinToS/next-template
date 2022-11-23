@@ -1,31 +1,13 @@
-import { NavbarPadding } from 'components/providers/Navbar/styles'
-import styled from 'styled-components'
-import tw from 'twin.macro'
+import { styled } from '@app/styles'
 
-const Style = styled.main`
-  ${NavbarPadding}
+export const Title = styled('h1', {
+  fontSize: '$10'
+})
 
-  ${tw`
-    flex 
-    flex-col
-    space-y-8
-    items-center
-    justify-center
-    
-    px-26
-    pb-26
- 
-    text-10xl
-  
-    bg-primary-500
-    text-secondary
-  `}
+export const Style = styled('main', {
+  flexCenter: 'row',
 
-  button {
-    ${tw`
-      text-2xl
-    `}
-  }
-`
+  windowSize: 100,
 
-export { Style }
+  bg: '$primary'
+})

@@ -1,13 +1,14 @@
-import type { ILinkProps } from './types'
+import { Style } from './styles'
 
-import NextLink from 'next/link'
+import { ComponentPropsWithoutRef } from 'react'
 
-//? <a/> inside is needed when use Image as children
-
-const Link = ({ children, ...props }: ILinkProps) => (
-  <NextLink {...props}>
-    <a>{children}</a>
-  </NextLink>
+export const Link = ({
+  children,
+  target = '_blank',
+  rel = 'noreferrer external noopener',
+  ...props
+}: ComponentPropsWithoutRef<'a'>) => (
+  <Style target={target} rel={rel} {...props}>
+    {children}
+  </Style>
 )
-
-export default Link
