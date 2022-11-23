@@ -1,8 +1,15 @@
-/** @type {import('next').NextConfig} */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const nextConfig = {
-  images: {},
-  swcMinify: true,
-  reactStrictMode: false
+  reactStrictMode: false,
+  images: { disableStaticImages: true },
+  typescript: { ignoreBuildErrors: true }
 }
 
-module.exports = nextConfig
+const withPWA = require('next-pwa')({
+  dest: 'public/pwa',
+  register: true,
+  skipWaiting: true,
+  sw: '/serviceWorker.js'
+})
+
+module.exports = withPWA(nextConfig)

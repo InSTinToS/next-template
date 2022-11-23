@@ -1,9 +1,5 @@
-import { usersStore } from './users'
+import { themeStore } from './theme'
 
 import { configureStore } from '@reduxjs/toolkit'
 
-const store = configureStore({
-  reducer: { usersStore: usersStore.reducer }
-})
-
-export { store }
+export const store = configureStore({ reducer: { theme: themeStore.reducer } })

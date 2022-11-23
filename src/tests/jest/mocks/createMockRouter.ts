@@ -1,6 +1,6 @@
 import { NextRouter } from 'next/router'
 
-const createMockRouter = (router: Partial<NextRouter>): NextRouter => ({
+export const createMockRouter = (router: Partial<NextRouter>) => ({
   query: {},
   route: '/',
   asPath: '/',
@@ -11,19 +11,13 @@ const createMockRouter = (router: Partial<NextRouter>): NextRouter => ({
   push: jest.fn(),
   isPreview: false,
   reload: jest.fn(),
-  replace: jest.fn(),
-  prefetch: jest.fn(),
-  domainLocales: [],
   isFallback: false,
+  domainLocales: [],
+  replace: jest.fn(),
   defaultLocale: 'en',
+  prefetch: jest.fn(),
   isLocaleDomain: false,
   beforePopState: jest.fn(),
-  events: {
-    on: jest.fn(),
-    off: jest.fn(),
-    emit: jest.fn()
-  },
+  events: { on: jest.fn(), off: jest.fn(), emit: jest.fn() },
   ...router
 })
-
-export { createMockRouter }

@@ -1,7 +1,3 @@
-import Home from '../components/templates/Home'
-
-import { getNavbarLayout } from 'components/providers/Navbar'
-
-Home.getLayout = getNavbarLayout
+import Home from '@app/components/templates/Home'
 
 export default Home

@@ -1,17 +1,30 @@
-import type { IGlobalProviderProps } from './types'
+import RadixProvider from '../Radix'
 
-import { ThemeProvider } from '../ThemeProvider'
+import { store } from '@app/store'
 
-import { store } from 'store'
+import { IChildrenProps } from '@app/types/react.types'
 
+import { ThemeProvider } from 'next-themes'
+import { QueryClient, QueryClientProvider } from 'react-query'
+// import { ReactQueryDevtools } from 'react-query/devtools'
 import { Provider as ReduxProvider } from 'react-redux'
 
-const GlobalProvider = ({ children }: IGlobalProviderProps) => (
-  <ReduxProvider store={store}>
-    <ThemeProvider>
-      <>{children}</>
-    </ThemeProvider>
-  </ReduxProvider>
-)
+const queryClient = new QueryClient()
+
+const GlobalProvider = ({ children }: IChildrenProps) => {
+  return (
+    <ReduxProvider store={store}>
+      <ThemeProvider>
+        <RadixProvider>
+          <QueryClientProvider client={queryClient}>
+            {children}
+
+            {/* <ReactQueryDevtools /> */}
+          </QueryClientProvider>
+        </RadixProvider>
+      </ThemeProvider>
+    </ReduxProvider>
+  )
+}
 
 export default GlobalProvider
